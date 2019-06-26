@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <div> {{title | upper}}</div>
+    <ul>
+        {% for item in array %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
+</body>
+
+</html>
